@@ -65,12 +65,10 @@ int main(void) {
 	puts("¬ведите шаг табул€ции: ");
 	scanf("%f", &dx);
 
-	fprintf(out, "___________________\n");
-	fprintf(out, "|%4s%3c|%7s%2c|\n", "x", ' ', "f(x)", ' ');
-	fprintf(out, "___________________\n");
+
 	for (float i = 0.1; i <= 2.10001; i += dx) {
 		res = tab_func(i);
-		fprintf(out, "|%5.3f%2c|%7.3f%2c|\n", i, ' ', res, ' ');
+		fprintf(out, "%f", res);
 	}
 
 	fclose(out);
